@@ -22,11 +22,15 @@ var Gift = Gift || (function($) {
         })();
     }
 
+    function unwrap(el) {
+        el.fadeOut();
+        localStorage.unwrapped = true;
+    }
+
     function init(inputOpts) {
   	
 		if(typeof(Storage)!=="undefined"){
 			if(window.location.hash=="#resetgift"){
-				console.log('Reset');
 				localStorage.removeItem('unwrapped');
 			}
 			if(localStorage.unwrapped){
@@ -50,7 +54,7 @@ var Gift = Gift || (function($) {
         });
 
         _wrap.on('click', function() {
-            Gift.unwrap(_wrap);
+            unwrap(_wrap);
         });
 
         var _message = $('<p></p>').css({
@@ -103,14 +107,8 @@ var Gift = Gift || (function($) {
         $('body').prepend(_wrap);
     }
 
-    function reveal(el) {
-        el.fadeOut();
-        localStorage.unwrapped = true;
-    }
-
     return {
-        wrap: init,
-        unwrap: reveal
+        wrap: init
     };
 
 })(window.jQuery);
