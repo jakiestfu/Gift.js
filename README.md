@@ -1,8 +1,9 @@
 Gift.js
 =======
 
-A Javascript library for wrapping your websites up as a present
+<img src="https://forrst-production.s3.amazonaws.com/multiposts/images/23752/mega.png?1354991353">
 
+A Javascript library for wrapping your websites up as a present
 
 To demo the script, follow <a href="http://lab.jakiestfu.com/giftjs/" target="_blank">lab.jakiestfu.com/giftjs</a>
 
