@@ -13,7 +13,9 @@ To demo the script, follow <a href="http://lab.jakiestfu.com/giftjs/" target="_b
 $(document).ready(function(){
     Gift.wrap({
         paper: 'http://lab.jakiestfu.com/giftjs/menorah.jpg', // Your tilable background
-        message: ['To: Mom & Dad', 'With Love, from Emily & Jacob'] // To and From text
+        message: ['To: Mom & Dad', 'With Love, from Emily & Jacob'], // To and From text
+        curl: true,
+        animationSpeed: 1000
     });
 }); 
 
@@ -22,6 +24,9 @@ $(document).ready(function(){
 This will "wrap" up your website and allow it to be "unwrapped" when clicked.
 
 Currently, the styles are applied via javascript because I felt the temporary nature of this script would be complemented by only using jQuery as a dependency.
+
+# Curling
+An additional <code>curl</code> parameter has been added. If set to true, the page will "curl" away using simple CSS properties and custom animations.
 
 # Resetting
 
